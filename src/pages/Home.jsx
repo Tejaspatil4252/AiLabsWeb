@@ -1,5 +1,19 @@
-const Home = () => {
-  return <div className="p-8"><h1 className="text-2xl font-bold">Home Page</h1></div>;
-};
+import React from 'react'
+import TopInfoBar from '../components/Navbar/TopInfoBar'
+import HomeSection1 from '../components/home/HomeSection1'
 
-export default Home;
+
+function Home() {
+  return (
+    <>
+    
+    
+      <div className="min-h-screen">
+        <HomeSection1 />
+        
+      </div>
+    </>
+  )
+}
+
+export default Home

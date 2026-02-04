@@ -193,8 +193,8 @@ const moreItems = [
         variants={navVariants}
         className={`fixed w-full z-50 transition-all duration-300 ${
           scrolled 
-            ? 'bg-gray-900/95 backdrop-blur-md shadow-2xl py-3 border-b border-gray-800' 
-            : 'bg-gradient-to-r from-gray-900 to-gray-800 py-4 shadow-xl'
+          ? 'bg-gray-900/95 backdrop-blur-md shadow-2xl py-3 border-b border-gray-800' 
+          : 'bg-transparent py-4'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -294,7 +294,7 @@ const moreItems = [
     <motion.div
       animate={{ rotate: isMoreOpen ? 180 : 0 }}
     >
-      <FaChevronDown className="w-4 h-4" />
+      <FaChevronDown className="w-3 h-3 mt-1" />
     </motion.div>
     <motion.div 
       variants={underlineVariants}
