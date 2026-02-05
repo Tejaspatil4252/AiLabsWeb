@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import ailabs from '../../assets/logo/AiLabs.png';
 
 import { 
   FaEye,          
@@ -200,43 +201,28 @@ const moreItems = [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Left Side - Logo */}
-            <motion.div
-              variants={logoVariants}
-              initial="initial"
-              animate="animate"
-              whileHover="hover"
-              className="flex items-center -ml-14"
-            >
-              <Link to="/" className="flex items-center space-x-3">
-                <motion.div 
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                  className="relative"
-                >
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <span className="text-white font-bold text-xl">V</span>
-                    <motion.div 
-                      className="absolute inset-0 rounded-xl border-2 border-blue-400/30"
-                      animate={{
-                        scale: [1, 1.2, 1],
-                        opacity: [0.5, 0, 0.5]
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                      }}
-                    />
-                  </div>
-                </motion.div>
-                <div className="text-right">
-                  <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent animate-gradient-x">
-                    Vayanta AI Labs
-                  </h1>
-                  <p className="text-xs text-gray-400 mt-0.5 mr-9">Intelligent Solutions</p>
-                </div>
-              </Link>
-            </motion.div>
+<motion.div
+  variants={logoVariants}
+  initial="initial"
+  animate="animate"
+  whileHover="hover"
+  className="flex items-center -ml-12 md:-ml-28"
+>
+  <Link to="/" className="flex items-center">
+    <motion.div 
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
+      className="relative"
+    >
+      {/* Large logo with aspect ratio */}
+      <img 
+        src={ailabs} 
+        alt="Vayanta AI Labs Logo" 
+         className="w-auto h-48 object-contain" // Control height, auto width
+      />
+    </motion.div>
+  </Link>
+</motion.div>
 
             {/* Right Side - Desktop Menu Items */}
             <div className="hidden lg:flex items-center space-x-8 -mr-14">

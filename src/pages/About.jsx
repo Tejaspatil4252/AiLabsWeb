@@ -1,6 +1,16 @@
+import React from 'react'
+import AboutSection1 from '../components/about/AboutSection1';
+import AboutSection2 from '../components/about/AboutSection2';
 
-const About = () => {
-  return <div className="p-8"><h1 className="text-2xl font-bold">About Page</h1></div>;
-};
+function About() {
+  return (
+    <>
+    <div className="min-h-screen">
+      <AboutSection1 />
+      
+    </div>
+    </>
+  )
+}
 
-export default About;
+export default About
