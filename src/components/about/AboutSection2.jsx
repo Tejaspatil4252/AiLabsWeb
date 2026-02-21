@@ -34,7 +34,7 @@ function AboutSection2() {
     }
   };
 
-  return (
+return (
     <section className="py-18 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
@@ -133,7 +133,7 @@ function AboutSection2() {
               whileHover={{ y: -8, scale: 1.02 }}
               className="group"
             >
-              <div className="h-full p-8 rounded-2xl bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="h-full p-8 rounded-2xl bg-white border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
                 {/* Icon with colored background */}
                 <div className={`w-16 h-16 rounded-xl ${item.bgColor} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <div className={item.iconColor}>
@@ -160,8 +160,14 @@ function AboutSection2() {
                   ))}
                 </div>
 
-                {/* Decorative line */}
-                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${item.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-2xl`} />
+                {/* Decorative gradient line - fixed to respect border radius */}
+                <div 
+                  className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                  style={{ 
+                    borderBottomLeftRadius: '16px', 
+                    borderBottomRightRadius: '16px' 
+                  }}
+                />
               </div>
             </motion.div>
           ))}

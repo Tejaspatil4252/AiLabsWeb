@@ -12,6 +12,7 @@ import Principles from './components/More/Principles';
 import Technology from './components/More/Technology';
 import AIFeatures from './components/More/AIFeatures';
 import KeyClientele from './components/More/KeyClientele';
+import Footer from './components/footer/Footer';
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -51,7 +52,9 @@ function App() {
             <Route path="key-clientele" element={<KeyClientele />} />
           </Route>
         </Routes>
-
+      <div>
+        <Footer />
+      </div>
     </Router>
   );
 }
